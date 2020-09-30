@@ -5,6 +5,7 @@
 .sitenav__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
   margin: 0;
   margin-left: 14px;
@@ -56,4 +57,20 @@
 .sitenav__item--active .sitenav__link::after,
 .sitenav__link:hover::after {
   opacity: 1;
+}
+
+@include breakpoint-down (850px) {
+  // VARIANT A - MENYU PASTGA TUSHIB OLADI
+
+  // .sitenav {
+  //   order: 1;
+  //   width: 100%;
+  // }
+
+
+  // VARIANT B - MENYU BERKINIB OLADI
+
+  .sitenav {
+    display: none;
+  }
 }
