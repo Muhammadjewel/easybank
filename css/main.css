@@ -452,6 +452,8 @@ img {
 }
 
 .button {
+  position: relative;
+  z-index: 1;
   display: inline-block;
   min-width: 163px;
   max-width: 100%;
@@ -471,13 +473,27 @@ img {
   text-overflow: ellipsis;
 }
 
-.button:hover {
+.button::before {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #fff;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.button:hover::before {
   opacity: 0.4;
 }
 
-.button--non-alpha:hover {
-  opacity: 1;
-  background-image: linear-gradient(135deg, rgba(51, 211, 94, 0.4) 0%, rgba(42, 182, 217, 0.4) 100%);
+.button__text {
+  position: relative;
+  z-index: 2;
 }
 
 .site-header {
