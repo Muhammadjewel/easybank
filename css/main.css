@@ -538,18 +538,19 @@ img {
   }
   .site-header__toggler {
     display: block;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    background-image: url("../img/toggler-open.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
     width: 44px;
     height: 44px;
+    padding: 0;
+    border: none;
     margin-left: 20px;
+    background-color: transparent;
+    background-image: url("../img/toggler-bg.png");
+    background-repeat: no-repeat;
+    -webkit-transition: background-position 0.3s ease;
+    transition: background-position 0.3s ease;
   }
   .site-header--open .site-header__toggler {
-    background-image: url("../img/toggler-close.svg");
+    background-position: -44px 0;
   }
 }
 

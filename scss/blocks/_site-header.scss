@@ -43,15 +43,22 @@
 
   .site-header__toggler {
     display: block;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    background-image: url("../img/toggler-open.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
     width: 44px;
     height: 44px;
+    padding: 0;
+    border: none;
     margin-left: 20px;
+    background-color: transparent;
+
+    // VARIANT A
+    // background-image: url("../img/toggler-open.svg");
+    // background-repeat: no-repeat;
+    // background-position: center center;
+
+    // VARIANT B
+    background-image: url("../img/toggler-bg.png");
+    background-repeat: no-repeat;
+    transition: background-position 0.3s ease;
 
     // .site-header--open & {
     //   background-image: url("../img/toggler-close.svg");
@@ -64,7 +71,13 @@
     // }
   }
 
+  // VARIANT A - BOSHQA RASMGA ALISHTIRISH
+  // .site-header--open .site-header__toggler {
+  //   background-image: url("../img/toggler-close.svg");
+  // }
+
+  // VARIANT B - BIR BUTUN RASMNING BIR BO'LAGINI KO'RSATISH
   .site-header--open .site-header__toggler {
-    background-image: url("../img/toggler-close.svg");
+    background-position: -44px 0;
   }
 }
