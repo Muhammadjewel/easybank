@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+  min-width: 163px;
+  max-width: 100%;
+  white-space: nowrap;
+  padding: 8px 16px;
+  border-radius: 22px;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: $green;
+  background-image: $gradient-bg;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  &--non-alpha:hover {
+    opacity: 1;
+    background-image: $gradient-bg-hover;
+  }
+}
