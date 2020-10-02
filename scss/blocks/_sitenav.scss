@@ -84,6 +84,14 @@
     background-color: #fff;
   }
 
+  .site-header--nojs .sitenav__list {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding: 0;
+  }
+
   .sitenav__item {
     margin: 0;
   }
