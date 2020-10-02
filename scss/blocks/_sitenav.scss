@@ -1,7 +1,3 @@
-.sitenav {
-  max-width: 756px;
-}
-
 .sitenav__list {
   display: flex;
   flex-wrap: wrap;
@@ -60,17 +56,52 @@
 }
 
 @include breakpoint-down (850px) {
-  // VARIANT A - MENYU PASTGA TUSHIB OLADI
+//   // VARIANT A - MENYU PASTGA TUSHIB OLADI
 
-  // .sitenav {
-  //   order: 1;
-  //   width: 100%;
-  // }
+//   // .sitenav {
+//   //   order: 1;
+//   //   width: 100%;
+//   // }
 
 
-  // VARIANT B - MENYU BERKINIB OLADI
+//   // VARIANT B - MENYU BERKINIB OLADI
 
-  .sitenav {
-    display: none;
+//   .sitenav {
+//     display: none;
+//   }
+
+  .sitenav__list {
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    left: 24px;
+    right: 24px;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+
+  .sitenav__item {
+    margin: 0;
+  }
+
+  .sitenav__link {
+    padding: 12px;
+    border-radius: 4px;
+    color: $dark-text-color;
+
+    &:hover,
+    .sitenav__item--active & {
+      background-color: $green;
+      background-image: $gradient-bg;
+      color: #fff;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }

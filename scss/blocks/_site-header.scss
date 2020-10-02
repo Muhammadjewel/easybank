@@ -14,6 +14,10 @@
   align-items: center;
 }
 
+.site-header__sitenav {
+  max-width: 756px;
+}
+
 .site-header__toggler {
   display: none;
 }
@@ -40,6 +44,27 @@
   .site-header__logo {
     margin-right: auto;
   }
+
+  .site-header__sitenav {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-width: 100%;
+    height: calc(100vh - 74px);
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(180deg, #2D314D 0%, rgba(45, 49, 77, 0.0001) 100%);
+
+    .site-header--open & {
+      display: block;
+    }
+  }
+
+  // .site-header--open .site-header__sitenav {
+  //   display: block;
+  // }
 
   .site-header__toggler {
     display: block;
@@ -79,5 +104,11 @@
   // VARIANT B - BIR BUTUN RASMNING BIR BO'LAGINI KO'RSATISH
   .site-header--open .site-header__toggler {
     background-position: -44px 0;
+  }
+}
+
+@include breakpoint-down (650px) {
+  .site-header__button {
+    display: none;
   }
 }
